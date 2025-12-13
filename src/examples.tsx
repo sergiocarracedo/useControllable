@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useControllable } from './index'
+import { useControllable, type UseControllableProps } from './index'
 
 /**
  * Example 1: Uncontrolled Input Component
@@ -113,32 +113,26 @@ export function Toggle({ checked, defaultChecked, onChange }: ToggleProps) {
 /**
  * Example 5: Other name for controlled prop
  */
-interface ToggleProps {
-  checked?: boolean
-  defaultChecked?: boolean
-  onChange?: (checked: boolean) => void
-}
+type CheckboxProps = {
+  label: string
+} & UseControllableProps<boolean, 'checked'>
 
-export function Toggle({ checked, defaultChecked, onChange }: ToggleProps) {
-  const [isChecked, setIsChecked] = useControllable<string, 'checked'>({
-    checked,
-    defaultChecked: defaultChecked ?? false,
-    onChangeChecked: onChange,
+export function Checkbox({ checked, defaultChecked, onChangeChecked, label }: CheckboxProps) {
+  const [isChecked, setIsChecked] = useControllable({
+    value: checked,
+    defaultValue: defaultChecked,
+    onChange: onChangeChecked,
   })
 
   return (
-    <button
-      onClick={() => setIsChecked(!isChecked)}
-      style={{
-        padding: '8px 16px',
-        backgroundColor: isChecked ? '#4caf50' : '#f44336',
-        color: 'white',
-        border: 'none',
-        borderRadius: '4px',
-        cursor: 'pointer',
-      }}
-    >
-      {isChecked ? 'ON' : 'OFF'}
-    </button>
+    <label>
+      <input
+        type="checkbox"
+        checked={isChecked}
+        onChange={(e) => setIsChecked(e.target.checked)}
+        style={{ marginLeft: '8px' }}
+      />
+      {label}
+    </label>
   )
 }

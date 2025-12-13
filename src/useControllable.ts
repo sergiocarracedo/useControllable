@@ -1,16 +1,29 @@
 import { useCallback, useRef, useState } from 'react'
 
-export type UseControllableStateParams<T> =
-  | {
-      value: T
-      onChange: (value: T) => void
-      defaultValue?: undefined
-    }
-  | {
-      defaultValue?: T
-      onChange?: undefined
-      value?: undefined
-    }
+type OnChangeProp<P extends string> = `onChange${P extends 'value' ? '' : Capitalize<P>}`
+type DefaultProp<P extends string> = `default${Capitalize<P>}`
+
+export type UseControllableProps<T, P extends string = 'value'> =
+  | ({
+      [key in P]: T
+    } & {
+      [key in OnChangeProp<P>]?: (value: T) => void
+    } & {
+      [key in DefaultProp<P>]?: undefined
+    })
+  | ({
+      [key in P]?: undefined
+    } & {
+      [key in OnChangeProp<P>]?: undefined
+    } & {
+      [key in DefaultProp<P>]?: T
+    })
+
+export type UseControllableStateParams<T> = {
+  value?: T
+  defaultValue?: T
+  onChange?: (value: T) => void
+}
 
 /**
  * A custom hook that manages both controlled and uncontrolled state.
