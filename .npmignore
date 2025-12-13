@@ -1,0 +1,24 @@
+# Source files
+src/
+*.test.ts
+*.test.tsx
+
+# Config files
+.github/
+.vscode/
+.editorconfig
+.gitignore
+.npmignore
+commitlint.config.js
+lefthook.yml
+tsconfig.json
+vite.config.ts
+vitest.config.ts
+.oxlintrc.json
+.oxfmtrc.json
+
+# Development files
+node_modules/
+coverage/
+.git/
+*.log
