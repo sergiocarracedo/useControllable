@@ -9,6 +9,9 @@ pre-commit:
     lint:
       glob: '*.{ts,tsx}'
       run: npx oxlint {staged_files}
+    lint-yml:
+      glob: '*.yml'
+      run: npx oxlint .
     typecheck:
       run: pnpm tsc --noEmit
     test:
