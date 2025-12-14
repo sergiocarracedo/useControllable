@@ -7,7 +7,10 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      glob: '*.{ts,tsx}'
+      glob: "*.{ts,tsx}"
       run: npx oxlint {staged_files}
     typecheck:
       run: pnpm tsc --noEmit
+    test:
+      glob: "*.{ts,tsx}"
+      run: pnpm vitest run --reporter=verbose --changed {staged_files}

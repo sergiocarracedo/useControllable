@@ -174,12 +174,14 @@ If any check fails, the commit will be rejected. Fix the issues and try again.
 useControllable/
 ├── .github/              # GitHub Actions workflows
 ├── .vscode/              # VSCode settings and tasks
+├── examples/              # VSCode settings and tasks
 ├── src/
-│   ├── index.ts         # Main hook implementation
-│   ├── examples.tsx     # Usage examples
-│   ├── test/
-│   │   └── setup.ts     # Test setup
-│   └── useControllable.test.tsx  # Tests
+│   ├── index.ts           # Main hook implementation
+│   │   └── setup.ts       # Test setup
+│   └── useControllable.ts # Te hook and the types
+│   ├── __test__/
+│   └──useControllable.test.tsx  # Tests
+├── test/
 ├── dist/                 # Build output (generated)
 ├── package.json
 ├── tsconfig.json

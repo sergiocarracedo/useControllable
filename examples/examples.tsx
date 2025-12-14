@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useControllable, type UseControllableProps } from './index'
+import { useControllable, type UseControllableProps } from '../src/index'
 
 /**
  * Example 1: Uncontrolled Input Component
