@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.2](https://github.com/sergiocarracedo/useControllable/compare/v1.1.1...v1.1.2) (2025-12-14)
+
+
+### Bug Fixes
+
+* lint ([4b133a5](https://github.com/sergiocarracedo/useControllable/commit/4b133a54d28407edcf5195df3d63451f52661022))
+* lint ([4b133a5](https://github.com/sergiocarracedo/useControllable/commit/4b133a54d28407edcf5195df3d63451f52661022))
+* lint ([2ed16dd](https://github.com/sergiocarracedo/useControllable/commit/2ed16dd3bb3abd42c90e97ab0b5ed2a918280a5b))
+
 ## [1.1.1](https://github.com/sergiocarracedo/useControllable/compare/v1.1.0...v1.1.1) (2025-12-14)
 
 
