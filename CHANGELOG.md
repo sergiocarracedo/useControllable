@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/sergiocarracedo/useControllable/compare/v1.1.0...v1.1.1) (2025-12-14)
+
+
+### Bug Fixes
+
+* fix release-please ([322f718](https://github.com/sergiocarracedo/useControllable/commit/322f718e98d909a4c0017ebbf8e7fb89271871ae))
+* release workflow ([2ec1f38](https://github.com/sergiocarracedo/useControllable/commit/2ec1f38f1bd03fc4f4153e633a0612854f95a9b6))
+
 ## [1.1.0](https://github.com/sergiocarracedo/useControllable/compare/v1.0.0...v1.1.0) (2025-12-14)
 
 
