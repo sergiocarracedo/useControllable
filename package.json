@@ -28,7 +28,7 @@
     "bench": "vitest bench",
     "lint": "oxlint",
     "format": "oxfmt .",
-    "format:check": "oxfmt --check .",
+    "format:check": "oxfmt --check . --ignore-path CHANGELOG.md",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
