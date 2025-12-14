@@ -4,12 +4,17 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  root: 'example',
   plugins: [
     react(),
     dts({
       include: ['src'],
-      exclude: ['**/*.test.ts', '**/*.test.tsx', 'src/test'],
+      exclude: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        'src/__test__/**',
+        '**/*.bench.ts',
+        '**/*.bench.tsx',
+      ],
       outDir: 'dist/types',
       insertTypesEntry: true,
     }),

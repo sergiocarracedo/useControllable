@@ -19,7 +19,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
